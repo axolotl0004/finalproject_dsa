@@ -112,3 +112,6 @@ The inventory and brand-filter results use fixed-width columns so IDs, game name
 ## Adding games
 
 Select option `11. Add New Game`. Enter a unique positive Game ID, the game name, category, publisher/brand, price, and starting stock quantity. The new game is stored in the linked list and inserted into the BST. The inventory is held in memory while the program is running; newly added games are not saved to a file after the program closes.
+
+# finalproject_dsa
+final project for dsa subject
