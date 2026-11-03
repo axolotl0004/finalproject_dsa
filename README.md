@@ -68,11 +68,11 @@ Ctrl + `
 
 Compile:
 
-g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o gamehub.exe
+g++ main.cpp -o execute
 
 Run:
 
-.\gamehub.exe
+.\execute.exe
 
 ## Suggested demo
 
