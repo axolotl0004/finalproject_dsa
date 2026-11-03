@@ -633,6 +633,56 @@ void deleteBST(TreeNode* current) {
 }
 
 // ======================================================
+// REMOVE GAME FROM INVENTORY
+// ======================================================
+
+void removeGame() {
+    int id;
+
+    cout << "\n============= REMOVE GAME =============\n";
+    cout << "Enter Game ID to remove: ";
+    cin >> id;
+
+    ProductNode* current = head;
+    ProductNode* previous = NULL;
+
+    // Find the game in the linked list.
+    while (current != NULL && current->product.id != id) {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        cout << "\nGame not found!\n";
+        return;
+    }
+
+    cout << "\nGame found: " << current->product.name << endl;
+    cout << "Brand: " << current->product.brand << endl;
+
+    // Remove the game from the linked-list inventory.
+    if (previous == NULL) {
+        head = current->next;
+    } else {
+        previous->next = current->next;
+    }
+
+    delete current;
+
+    // Rebuild the BST so the removed game cannot be found by ID.
+    deleteBST(root);
+    root = NULL;
+
+    ProductNode* inventoryItem = head;
+    while (inventoryItem != NULL) {
+        insertBST(inventoryItem->product);
+        inventoryItem = inventoryItem->next;
+    }
+
+    cout << "\nGame removed successfully!\n";
+}
+
+// ======================================================
 // MENU
 // ======================================================
 
@@ -654,6 +704,7 @@ void showMenu() {
     cout << "9. Recently Viewed Games\n";
     cout << "10. Show BST In-Order\n";
     cout << "11. Add New Game\n";
+    cout << "12. Remove Game\n";
     cout << "0. Exit\n";
     cout << "============================================\n";
     cout << "Choose: ";
@@ -747,6 +798,11 @@ int main() {
 
             case 11:
                 addNewGame();
+                goBackToMenu();
+                break;
+
+            case 12:
+                removeGame();
                 goBackToMenu();
                 break;
 

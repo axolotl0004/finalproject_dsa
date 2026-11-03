@@ -53,6 +53,9 @@ Choose **11. Add New Game** from the main menu. The program asks for the game's 
 
 The new game is added to both the linked-list inventory and the Binary Search Tree, so it appears in the inventory and can also be found through BST ID search.
 
+### 10. Remove Game
+Choose **12. Remove Game** from the main menu and enter the game's ID. The program removes the matching game from the linked-list inventory. It then rebuilds the Binary Search Tree from the remaining inventory, so the removed game is no longer available through BST ID search.
+
 ### 9. Dynamic Memory
 The linked list, stack, queue, and BST use dynamically allocated nodes.
 
@@ -68,11 +71,11 @@ Ctrl + `
 
 Compile:
 
-g++ main.cpp -o execute
+g++ main.cpp -o gamehub
 
 Run:
 
-.\execute.exe
+.\gamehub.exe
 
 ## Suggested demo
 
@@ -89,7 +92,8 @@ Run:
 11. Show the BST in-order traversal.
 12. Add a new game and enter its initial stock quantity.
 13. Show the inventory again and search for the new game by ID.
-14. Exit.
+14. Remove a game by ID and confirm it no longer appears in the inventory or BST search.
+15. Exit.
 
 ## Important note
 
@@ -112,6 +116,3 @@ The inventory and brand-filter results use fixed-width columns so IDs, game name
 ## Adding games
 
 Select option `11. Add New Game`. Enter a unique positive Game ID, the game name, category, publisher/brand, price, and starting stock quantity. The new game is stored in the linked list and inserted into the BST. The inventory is held in memory while the program is running; newly added games are not saved to a file after the program closes.
-
-# finalproject_dsa
-final project for dsa subject
