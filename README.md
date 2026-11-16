@@ -94,21 +94,3 @@ Run:
 13. Show the inventory again and search for the new game by ID.
 14. Remove a game by ID and confirm it no longer appears in the inventory or BST search.
 15. Exit.
-
-## Menu pause
-
-After each menu operation, the program waits for:
-
-`Press ENTER to go back to the main menu...`
-
-This gives you time to read the product/search/order results before the menu is shown again.
-
-
-## Display formatting
-
-The inventory and brand-filter results use fixed-width columns so IDs, game names, categories, brands, prices, and stock quantities line up neatly in the console.
-
-
-## Adding games
-
-Select option `11. Add New Game`. Enter a unique positive Game ID, the game name, category, publisher/brand, price, and starting stock quantity. The new game is stored in the linked list and inserted into the BST. The inventory is held in memory while the program is running; newly added games are not saved to a file after the program closes.
