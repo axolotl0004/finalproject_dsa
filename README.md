@@ -95,10 +95,6 @@ Run:
 14. Remove a game by ID and confirm it no longer appears in the inventory or BST search.
 15. Exit.
 
-## Important note
-
-The Lab 1-8 manuals were not available. This version is therefore based on the requirements explicitly visible in the provided final-output document, including Lists, Stacks, Queues, BSTs, Searching, Sorting, brand filtering, checkout processing, stock updates, and memory management.
-
 ## Menu pause
 
 After each menu operation, the program waits for:
